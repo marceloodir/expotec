@@ -15,10 +15,12 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    get_kinds
   end
 
   # GET /users/1/edit
   def edit
+    get_kinds
   end
 
   # POST /users
@@ -65,6 +67,10 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def get_kinds
+      @kinds = Kind.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
