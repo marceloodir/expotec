@@ -12,14 +12,7 @@ Kind.create!([{description: "Palestrante"},
 	         {description: "Participante"},
 	         {description: "Avaliador"}])
 
-puts 'Gerando os Usuários...'
-10.times do |i|
-	User.create!(
-		name:  Faker::Name.name,
-		email: Faker::Internet.email,
-		cpf:   CpfUtils.cpf_formatted,
-		kind: Kind.all.sample)
-end
+
 
 
 
