@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @user.address = Address.new
     get_kinds
   end
 
@@ -73,8 +74,8 @@ class UsersController < ApplicationController
       @kinds = Kind.all
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list through. address_attributes
     def user_params
-      params.require(:user).permit(:name, :email, :cpf, :kind_id)
+      params.require(:user).permit(:name, :email, :cpf, :kind_id, address_attributes: [:street, :city, :state])
     end
 end

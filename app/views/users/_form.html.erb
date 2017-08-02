@@ -33,6 +33,23 @@
     <%= collection_select :user, :kind_id, @kinds, :id, :description %>
   </div>
 
+
+  <%= form.fields_for :address do |address_fields| %>
+    <div class="field">
+      <%= address_fields.label :street %>
+      <%= address_fields.text_field :street%>
+    </div>
+    <div class="field">
+      <%= address_fields.label :city %>
+      <%= address_fields.text_field :city%>
+    </div>
+    <div class="field">
+      <%= address_fields.label :state %>
+      <%= address_fields.text_field :state%>
+    </div>
+  <% end %>
+
+
   <div class="actions">
     <%= form.submit "Enviar", class: "button" %>
     <%= link_to 'Back', users_path, class: "button" %>
