@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1><%= User.model_name.human(count: @users.count) %></h1>
 
 <table>
   <thead>
@@ -20,9 +20,9 @@
         <td><%= user.email %></td>
         <td><%= user.cpf %></td>
         <td><%= user.kind.description %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('button.show'), user %></td>
+        <td><%= link_to t('button.edit'), edit_user_path(user) %></td>
+        <td><%= link_to t('button.destroy'), user, method: :delete, data: { confirm: t('message.confirm_delete') } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,6 +30,6 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to t('button.new_user'), new_user_path %>
 <br><br>
-<%= link_to 'Voltar', home_index_path %>
+<%= link_to t('button.back'), home_index_path %>

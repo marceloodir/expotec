@@ -1,2 +1,25 @@
 "pt-BR":
-  hello: "Olá Mundo!!!"
+  hello: Olá Mundo!!!
+
+  activerecord:
+    models:
+      user:
+        one: Usuário
+        other: Usuários
+    
+    attributes:
+      user:
+        name: Nome
+        email: E-mail
+        kind: Tipo
+        kind_id: Tipo
+
+  button:
+    show: Mostrar
+    edit: Editar
+    destroy: Apagar
+    new_user: Novo Usuário
+    back: Voltar
+
+  message:
+    confirm_delete: Você tem certeza?
