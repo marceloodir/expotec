@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Email</th>
+      <th><%= User.human_attribute_name "nome" %></th>
+      <th><%= User.human_attribute_name "e-mail" %></th>
       <th>Cpf</th>
-      <th>Kind</th>
+      <th><%= User.human_attribute_name "kind" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
