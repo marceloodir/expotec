@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.2'
 gem 'faker'
 gem 'cpf_utils'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'jquery-rails'
+gem 'cocoon'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

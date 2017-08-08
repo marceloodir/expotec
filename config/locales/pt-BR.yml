@@ -6,6 +6,15 @@
       user:
         one: Usuário
         other: Usuários
+      phone:
+        one: Telefone
+        other: Telefones
+      kind:
+        one: Tipo
+        other: Tipos
+      address:
+        one: Endereço
+        other: Endereços
     
     attributes:
       user:
@@ -13,6 +22,15 @@
         email: E-mail
         kind: Tipo
         kind_id: Tipo
+      phone:
+        phone: Telefone
+      kind:
+        description: Descrição
+      address:
+        street: Rua
+        city: Cidade
+        state: Estado
+        
 
   button:
     show: Mostrar

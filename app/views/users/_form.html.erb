@@ -49,6 +49,12 @@
     </div>
   <% end %>
 
+  <div id="phones">
+   <%= link_to_add_association '[Adicionar Telefone]', form, :phones %>
+    <%= form.fields_for :phones do |phones_fields| %>
+      <%= render "phone_fields", f: phones_fields  %>
+    <% end %>
+  </div>
 
   <div class="actions">
     <%= form.submit "Enviar", class: "button" %>
