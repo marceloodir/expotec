@@ -14,6 +14,7 @@ gem 'cpf_utils'
 gem 'rails-i18n', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'cocoon'
+gem 'kaminari'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

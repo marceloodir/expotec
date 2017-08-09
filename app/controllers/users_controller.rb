@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :get_kinds, only: [:new, :edit, :create]
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.order(:name).page(params[:page]).per(10)
   end
 
   # GET /users/1
@@ -16,12 +17,12 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @user.address = Address.new
-    get_kinds
+    #get_kinds
   end
 
   # GET /users/1/edit
   def edit
-    get_kinds
+    #get_kinds
   end
 
   # POST /users

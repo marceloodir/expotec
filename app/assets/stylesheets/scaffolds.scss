@@ -1,4 +1,10 @@
 /* Basic Grey */
+
+table {
+    width: 100%;
+    font-size: 25px;
+}
+
 .basic-grey {
     margin-left:auto;
     margin-right:auto;
@@ -11,7 +17,7 @@
     border:1px solid #E4E4E4;
 }
 .basic-grey h1 {
-    font-size: 25px;
+    font-size: 40px;
     padding: 0px 0px 10px 40px;
     display: block;
     border-bottom:1px solid #E4E4E4;
@@ -80,4 +86,12 @@
 }
 .basic-grey .button:hover {
     background: #CF7A7A
+}
+
+.basic-grey#usuarios {
+    max-width: 800px;
+}
+
+#paginador {
+    font-size: 15px;
 }

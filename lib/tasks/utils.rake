@@ -3,7 +3,7 @@ namespace :utils do
   task seed: :environment do
   	
   	puts 'Gerando os Usuários Aleatórios...'
-	10.times do |i|
+	100.times do |i|
 		User.create!(
 			name:  Faker::Name.name,
 			email: Faker::Internet.email,
