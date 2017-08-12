@@ -15,6 +15,8 @@ gem 'rails-i18n', '~> 5.0.0'
 gem 'jquery-rails'
 gem 'cocoon'
 gem 'kaminari'
+gem "bower-rails", "~> 0.11.0"
+gem 'bootstrap', '~> 4.0.0.beta'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

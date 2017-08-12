@@ -4,7 +4,12 @@ class AddressesController < ApplicationController
   # GET /addresses
   # GET /addresses.json
   def index
-    @addresses = Address.all
+    #@addresses = Address.all
+
+    respond_to do |format|
+      format.html { @addresses = Address.all }
+      format.js
+    end
   end
 
   # GET /addresses/1
