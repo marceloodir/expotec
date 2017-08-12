@@ -1,4 +1,4 @@
-<%= form_with(model: user, local: true, html: { class: "basic-grey" }) do |form| %>
+<%= form_with(model: user, local: true, html: { class: "padrao" }) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -13,50 +13,50 @@
 
   <h1>Users</h1>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
     <%= form.text_field :name, id: :user_name %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :email %>
     <%= form.text_field :email, id: :user_email %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :cpf %>
     <%= form.text_field :cpf, id: :user_cpf %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :kind_id %>
     <%= collection_select :user, :kind_id, @kinds, :id, :description %>
   </div>
 
 
   <%= form.fields_for :address do |address_fields| %>
-    <div class="field">
+    <div class="form-group">
       <%= address_fields.label :street %>
       <%= address_fields.text_field :street%>
     </div>
-    <div class="field">
+    <div class="form-group">
       <%= address_fields.label :city %>
       <%= address_fields.text_field :city%>
     </div>
-    <div class="field">
+    <div class="form-group">
       <%= address_fields.label :state %>
       <%= address_fields.select :state, options_for_states(@user.address.state) %>
     </div>
   <% end %>
 
-  <div id="phones">
+  <div id="phones" class="form-group">
    <%= link_to_add_association '[Adicionar Telefone]', form, :phones %>
     <%= form.fields_for :phones do |phones_fields| %>
       <%= render "phone_fields", f: phones_fields  %>
     <% end %>
   </div>
 
-  <div class="actions">
+  <div class="form-group">
     <%= form.submit "Enviar", class: "btn btn-primary" %>
     <%= link_to 'Back', users_path, class: "btn btn-info" %>
   </div>
